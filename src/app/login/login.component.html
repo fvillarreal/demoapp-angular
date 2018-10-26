@@ -1,0 +1,5 @@
+<h3>Login</h3>
+<div>This is the username typed: [{{ username }}]</div>
+<label for="username">Username:</label>
+<input type="text" [(ngModel)]="username" (input)="onUserType()">
+<div><button (click)="onUserReset()" [disabled]="disabled">Reset password</button></div>
