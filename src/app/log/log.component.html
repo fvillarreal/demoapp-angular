@@ -1,0 +1,8 @@
+<h2>Log</h2>
+<div *ngIf="showPassword">Password text: [{{ password }}]</div>
+<div><button (click)="onClickButton()">{{ buttonText }}</button></div>
+<div *ngFor="let logItem of logs; let i = index">
+  <div [ngStyle]="{'color':checkBackground(i)}" [ngClass]="{'background-color':checkClasses(i)}">
+    <app-log-detail [dateText]="logItem"></app-log-detail>
+  </div>
+</div>
